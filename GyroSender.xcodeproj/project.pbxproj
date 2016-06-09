@@ -16,6 +16,14 @@
 		74BF31541D08AAEA0027C04C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74BF31531D08AAEA0027C04C /* Assets.xcassets */; };
 		74BF31571D08AAEA0027C04C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74BF31551D08AAEA0027C04C /* LaunchScreen.storyboard */; };
 		74BF31621D08AAEA0027C04C /* GyroSenderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BF31611D08AAEA0027C04C /* GyroSenderTests.swift */; };
+		74CCE3111D09816E00F97A90 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74CCE30F1D09816E00F97A90 /* Interface.storyboard */; };
+		74CCE3131D09816E00F97A90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74CCE3121D09816E00F97A90 /* Assets.xcassets */; };
+		74CCE31A1D09816F00F97A90 /* Gyrosender wrist Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 74CCE3191D09816E00F97A90 /* Gyrosender wrist Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		74CCE3211D09816F00F97A90 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CCE3201D09816F00F97A90 /* InterfaceController.swift */; };
+		74CCE3231D09816F00F97A90 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CCE3221D09816F00F97A90 /* ExtensionDelegate.swift */; };
+		74CCE3251D09816F00F97A90 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CCE3241D09816F00F97A90 /* NotificationController.swift */; };
+		74CCE3271D09816F00F97A90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74CCE3261D09816F00F97A90 /* Assets.xcassets */; };
+		74CCE32B1D09816F00F97A90 /* Gyrosender wrist.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 74CCE30D1D09816E00F97A90 /* Gyrosender wrist.app */; };
 		EDF583321475FD3D6ED56D4F /* Pods_GyroSender.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1036F2E46FDAFBF1769FEED7 /* Pods_GyroSender.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,7 +35,46 @@
 			remoteGlobalIDString = 74BF31481D08AAEA0027C04C;
 			remoteInfo = GyroSender;
 		};
+		74CCE31B1D09816F00F97A90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 74BF31411D08AAEA0027C04C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74CCE3181D09816E00F97A90;
+			remoteInfo = "Gyrosender wrist Extension";
+		};
+		74CCE3291D09816F00F97A90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 74BF31411D08AAEA0027C04C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74CCE30C1D09816E00F97A90;
+			remoteInfo = "Gyrosender wrist";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		74CCE3311D09816F00F97A90 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				74CCE31A1D09816F00F97A90 /* Gyrosender wrist Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74CCE3331D09816F00F97A90 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				74CCE32B1D09816F00F97A90 /* Gyrosender wrist.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1036F2E46FDAFBF1769FEED7 /* Pods_GyroSender.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GyroSender.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,12 +92,30 @@
 		74BF315D1D08AAEA0027C04C /* GyroSenderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GyroSenderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		74BF31611D08AAEA0027C04C /* GyroSenderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GyroSenderTests.swift; sourceTree = "<group>"; };
 		74BF31631D08AAEA0027C04C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74CCE30D1D09816E00F97A90 /* Gyrosender wrist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Gyrosender wrist.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		74CCE3101D09816E00F97A90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		74CCE3121D09816E00F97A90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		74CCE3141D09816E00F97A90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74CCE3191D09816E00F97A90 /* Gyrosender wrist Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Gyrosender wrist Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		74CCE31F1D09816F00F97A90 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		74CCE3201D09816F00F97A90 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		74CCE3221D09816F00F97A90 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		74CCE3241D09816F00F97A90 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		74CCE3261D09816F00F97A90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		74CCE3281D09816F00F97A90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9978F80CBC6D5E5A2CC18684 /* Pods-GyroSender.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GyroSender.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GyroSender/Pods-GyroSender.debug.xcconfig"; sourceTree = "<group>"; };
 		E39456E1599A75FE351C00FB /* Pods-GyroSenderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GyroSenderTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GyroSenderTests/Pods-GyroSenderTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E8CCB0BA939CD3492F6292B9 /* Pods-GyroSenderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GyroSenderTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GyroSenderTests/Pods-GyroSenderTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		039AB9750FDB0C636424CA81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		74BF31461D08AAEA0027C04C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -64,6 +129,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				475A1506DE43D90F52C68343 /* Pods_GyroSenderTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74CCE3161D09816E00F97A90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +158,8 @@
 			children = (
 				74BF314B1D08AAEA0027C04C /* GyroSender */,
 				74BF31601D08AAEA0027C04C /* GyroSenderTests */,
+				74CCE30E1D09816E00F97A90 /* Gyrosender wrist */,
+				74CCE31D1D09816F00F97A90 /* Gyrosender wrist Extension */,
 				74BF314A1D08AAEA0027C04C /* Products */,
 				3FF85ED82D412537D043BE19 /* Pods */,
 				CCCFC4AA47433A04992B738B /* Frameworks */,
@@ -97,6 +171,8 @@
 			children = (
 				74BF31491D08AAEA0027C04C /* GyroSender.app */,
 				74BF315D1D08AAEA0027C04C /* GyroSenderTests.xctest */,
+				74CCE30D1D09816E00F97A90 /* Gyrosender wrist.app */,
+				74CCE3191D09816E00F97A90 /* Gyrosender wrist Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,6 +201,37 @@
 			path = GyroSenderTests;
 			sourceTree = "<group>";
 		};
+		74CCE30E1D09816E00F97A90 /* Gyrosender wrist */ = {
+			isa = PBXGroup;
+			children = (
+				74CCE30F1D09816E00F97A90 /* Interface.storyboard */,
+				74CCE3121D09816E00F97A90 /* Assets.xcassets */,
+				74CCE3141D09816E00F97A90 /* Info.plist */,
+			);
+			path = "Gyrosender wrist";
+			sourceTree = "<group>";
+		};
+		74CCE31D1D09816F00F97A90 /* Gyrosender wrist Extension */ = {
+			isa = PBXGroup;
+			children = (
+				74CCE3201D09816F00F97A90 /* InterfaceController.swift */,
+				74CCE3221D09816F00F97A90 /* ExtensionDelegate.swift */,
+				74CCE3241D09816F00F97A90 /* NotificationController.swift */,
+				74CCE3261D09816F00F97A90 /* Assets.xcassets */,
+				74CCE3281D09816F00F97A90 /* Info.plist */,
+				74CCE31E1D09816F00F97A90 /* Supporting Files */,
+			);
+			path = "Gyrosender wrist Extension";
+			sourceTree = "<group>";
+		};
+		74CCE31E1D09816F00F97A90 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				74CCE31F1D09816F00F97A90 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		CCCFC4AA47433A04992B738B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,10 +254,12 @@
 				74BF31471D08AAEA0027C04C /* Resources */,
 				4464579FBDAF3E0424750DEC /* 📦 Embed Pods Frameworks */,
 				E393BDA3141A2997555F3CA0 /* 📦 Copy Pods Resources */,
+				74CCE3331D09816F00F97A90 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				74CCE32A1D09816F00F97A90 /* PBXTargetDependency */,
 			);
 			name = GyroSender;
 			productName = GyroSender;
@@ -178,6 +287,41 @@
 			productReference = 74BF315D1D08AAEA0027C04C /* GyroSenderTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		74CCE30C1D09816E00F97A90 /* Gyrosender wrist */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74CCE3321D09816F00F97A90 /* Build configuration list for PBXNativeTarget "Gyrosender wrist" */;
+			buildPhases = (
+				74CCE30B1D09816E00F97A90 /* Resources */,
+				74CCE3311D09816F00F97A90 /* Embed App Extensions */,
+				039AB9750FDB0C636424CA81 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				74CCE31C1D09816F00F97A90 /* PBXTargetDependency */,
+			);
+			name = "Gyrosender wrist";
+			productName = "Gyrosender wrist";
+			productReference = 74CCE30D1D09816E00F97A90 /* Gyrosender wrist.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		74CCE3181D09816E00F97A90 /* Gyrosender wrist Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74CCE3301D09816F00F97A90 /* Build configuration list for PBXNativeTarget "Gyrosender wrist Extension" */;
+			buildPhases = (
+				74CCE3151D09816E00F97A90 /* Sources */,
+				74CCE3171D09816E00F97A90 /* Resources */,
+				74CCE3161D09816E00F97A90 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Gyrosender wrist Extension";
+			productName = "Gyrosender wrist Extension";
+			productReference = 74CCE3191D09816E00F97A90 /* Gyrosender wrist Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -197,6 +341,14 @@
 						DevelopmentTeam = 7TD9A665TC;
 						TestTargetID = 74BF31481D08AAEA0027C04C;
 					};
+					74CCE30C1D09816E00F97A90 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 7TD9A665TC;
+					};
+					74CCE3181D09816E00F97A90 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 7TD9A665TC;
+					};
 				};
 			};
 			buildConfigurationList = 74BF31441D08AAEA0027C04C /* Build configuration list for PBXProject "GyroSender" */;
@@ -214,6 +366,8 @@
 			targets = (
 				74BF31481D08AAEA0027C04C /* GyroSender */,
 				74BF315C1D08AAEA0027C04C /* GyroSenderTests */,
+				74CCE30C1D09816E00F97A90 /* Gyrosender wrist */,
+				74CCE3181D09816E00F97A90 /* Gyrosender wrist Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -233,6 +387,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74CCE30B1D09816E00F97A90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74CCE3131D09816E00F97A90 /* Assets.xcassets in Resources */,
+				74CCE3111D09816E00F97A90 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74CCE3171D09816E00F97A90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74CCE3271D09816F00F97A90 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +522,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		74CCE3151D09816E00F97A90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74CCE3251D09816F00F97A90 /* NotificationController.swift in Sources */,
+				74CCE3231D09816F00F97A90 /* ExtensionDelegate.swift in Sources */,
+				74CCE3211D09816F00F97A90 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -358,6 +539,16 @@
 			isa = PBXTargetDependency;
 			target = 74BF31481D08AAEA0027C04C /* GyroSender */;
 			targetProxy = 74BF315E1D08AAEA0027C04C /* PBXContainerItemProxy */;
+		};
+		74CCE31C1D09816F00F97A90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 74CCE3181D09816E00F97A90 /* Gyrosender wrist Extension */;
+			targetProxy = 74CCE31B1D09816F00F97A90 /* PBXContainerItemProxy */;
+		};
+		74CCE32A1D09816F00F97A90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 74CCE30C1D09816E00F97A90 /* Gyrosender wrist */;
+			targetProxy = 74CCE3291D09816F00F97A90 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -376,6 +567,14 @@
 				74BF31561D08AAEA0027C04C /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		74CCE30F1D09816E00F97A90 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74CCE3101D09816E00F97A90 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -516,6 +715,66 @@
 			};
 			name = Release;
 		};
+		74CCE32C1D09816F00F97A90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = Gyrosender_wrist_Extension;
+				INFOPLIST_FILE = "Gyrosender wrist/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.devian.GyroSender.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		74CCE32D1D09816F00F97A90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = Gyrosender_wrist_Extension;
+				INFOPLIST_FILE = "Gyrosender wrist/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.devian.GyroSender.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
+		74CCE32E1D09816F00F97A90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Gyrosender wrist Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.devian.GyroSender.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Debug;
+		};
+		74CCE32F1D09816F00F97A90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Gyrosender wrist Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.devian.GyroSender.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -542,6 +801,24 @@
 			buildConfigurations = (
 				74BF316A1D08AAEA0027C04C /* Debug */,
 				74BF316B1D08AAEA0027C04C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74CCE3301D09816F00F97A90 /* Build configuration list for PBXNativeTarget "Gyrosender wrist Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74CCE32E1D09816F00F97A90 /* Debug */,
+				74CCE32F1D09816F00F97A90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74CCE3321D09816F00F97A90 /* Build configuration list for PBXNativeTarget "Gyrosender wrist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74CCE32C1D09816F00F97A90 /* Debug */,
+				74CCE32D1D09816F00F97A90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

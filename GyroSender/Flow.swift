@@ -11,29 +11,14 @@ import SwiftDDP
 
 let flow = Flow()
 
-class Module: MeteorDocument {
-    var name: String?
-    var type: String?
-    var parent: String?
-    
-    required init(id: String, fields: NSDictionary?) {
-        super.init(id: id, fields: fields)
-    }
-    
-    convenience init(name: String, type: String) {
-        self.init(id: Meteor.client.getId(), fields: ["name": name, "type": type])
-    }
-}
-
 class Flow: NSObject {
     let browser = NSNetServiceBrowser()
-    var module: Module?
+    var moduleId: String?
     
     var searchController: SearchController?
     var viewController: ViewController?
     var visualisationService: NSNetService?
     var visualisationServiceURL: String?
-    let modules = MeteorCollection<Module>(name: "modules")
 
     override init() {
         super.init()
@@ -51,16 +36,30 @@ class Flow: NSObject {
 
     
     func registerModule() {
-        if module == nil {
-            module = Module(name: UIDevice.currentDevice().name, type: "iPhone")
-            modules.insert(module!)
+        if moduleId == nil {
+            Meteor.call("registerWebsocketModule", params: [["type": "iPhone", "name": UIDevice.currentDevice().name]]) { (result, error) in
+                if let moduleId = result as? String {
+                    self.moduleId = moduleId
+                }
+            }
+        } else {
+            let event: [String: AnyObject] = [
+                "type": "stateChange",
+                "payload": 2,
+                "senderId": moduleId!
+            ]
+            Meteor.call("registerWebsocketEvent", params: [event], callback: nil)
         }
     }
     
     func unregisterModule() {
-        if let module = module {
-            modules.remove(module)
-            self.module = nil
+        if let moduleId = moduleId {
+            let event: [String: AnyObject] = [
+                "type": "stateChange",
+                "payload": 0,
+                "senderId&&&": moduleId
+            ]
+            Meteor.call("registerWebsocketEvent", params: [event], callback: nil)
         }
     }
 }

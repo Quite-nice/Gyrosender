@@ -9,6 +9,16 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>Gyrosender wrist (Notification).xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
+		<key>Gyrosender wrist.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -18,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>74BF315C1D08AAEA0027C04C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>74CCE30C1D09816E00F97A90</key>
 		<dict>
 			<key>primary</key>
 			<true/>
