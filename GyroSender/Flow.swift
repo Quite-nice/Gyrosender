@@ -57,7 +57,7 @@ class Flow: NSObject {
             let event: [String: AnyObject] = [
                 "type": "stateChange",
                 "payload": 0,
-                "senderId&&&": moduleId
+                "senderId": moduleId
             ]
             Meteor.call("registerWebsocketEvent", params: [event], callback: nil)
         }
