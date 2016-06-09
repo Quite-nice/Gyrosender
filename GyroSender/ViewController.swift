@@ -19,6 +19,7 @@ func round2(number: Double) -> Double {
 
 class ViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var nameTextField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,5 +44,14 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func saveName(sender: AnyObject) {
+        if let newName = nameTextField.text {
+            let event: [String: AnyObject] = [
+                "type": "nameChange",
+                "payload": newName,
+                "senderId": flow.moduleId!
+            ]
+            Meteor.call("registerWebsocketEvent", params: [event], callback: nil)
+        }
+    }
 }
