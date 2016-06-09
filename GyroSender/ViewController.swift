@@ -7,11 +7,34 @@
 //
 
 import UIKit
+import SwiftDDP
+import CoreMotion
+
+let motionManager = CMMotionManager()
+
+func round2(number: Double) -> Double {
+    let factor = 100.0
+    return round(number*factor)
+}
 
 class ViewController: UIViewController {
+    @IBOutlet weak var label: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        if motionManager.gyroAvailable {
+            print("timeInterval: \(motionManager.gyroUpdateInterval)")
+            motionManager.deviceMotionUpdateInterval = 0.1
+            print(motionManager.gyroUpdateInterval)
+            motionManager.startDeviceMotionUpdatesToQueue(NSOperationQueue.mainQueue()) { (data, error) in
+                if let attitude = data?.attitude {
+                    let rounded = (round2(attitude.roll), round2(attitude.pitch), round2(attitude.yaw))
+                    self.label.text = "\(rounded.0) \(rounded.1) \(rounded.2)"
+                }
+            }
+        } else {
+            print("gyro not available")
+        }
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -22,4 +45,3 @@ class ViewController: UIViewController {
 
 
 }
-

@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		475A1506DE43D90F52C68343 /* Pods_GyroSenderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 604D8755706D4156A29C52EB /* Pods_GyroSenderTests.framework */; };
+		7477B5C71D08BE4D008B5D44 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7477B5C61D08BE4D008B5D44 /* SearchController.swift */; };
+		7477B5C91D08C1EE008B5D44 /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7477B5C81D08C1EE008B5D44 /* Flow.swift */; };
 		74BF314D1D08AAEA0027C04C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BF314C1D08AAEA0027C04C /* AppDelegate.swift */; };
 		74BF314F1D08AAEA0027C04C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BF314E1D08AAEA0027C04C /* ViewController.swift */; };
 		74BF31521D08AAEA0027C04C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74BF31501D08AAEA0027C04C /* Main.storyboard */; };
 		74BF31541D08AAEA0027C04C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74BF31531D08AAEA0027C04C /* Assets.xcassets */; };
 		74BF31571D08AAEA0027C04C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74BF31551D08AAEA0027C04C /* LaunchScreen.storyboard */; };
 		74BF31621D08AAEA0027C04C /* GyroSenderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BF31611D08AAEA0027C04C /* GyroSenderTests.swift */; };
+		EDF583321475FD3D6ED56D4F /* Pods_GyroSender.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1036F2E46FDAFBF1769FEED7 /* Pods_GyroSender.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +30,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1036F2E46FDAFBF1769FEED7 /* Pods_GyroSender.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GyroSender.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BDC8C94C53C6922A73F306D /* Pods-GyroSender.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GyroSender.release.xcconfig"; path = "Pods/Target Support Files/Pods-GyroSender/Pods-GyroSender.release.xcconfig"; sourceTree = "<group>"; };
+		604D8755706D4156A29C52EB /* Pods_GyroSenderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GyroSenderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7477B5C61D08BE4D008B5D44 /* SearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		7477B5C81D08C1EE008B5D44 /* Flow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
 		74BF31491D08AAEA0027C04C /* GyroSender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GyroSender.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74BF314C1D08AAEA0027C04C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74BF314E1D08AAEA0027C04C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +45,9 @@
 		74BF315D1D08AAEA0027C04C /* GyroSenderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GyroSenderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		74BF31611D08AAEA0027C04C /* GyroSenderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GyroSenderTests.swift; sourceTree = "<group>"; };
 		74BF31631D08AAEA0027C04C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9978F80CBC6D5E5A2CC18684 /* Pods-GyroSender.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GyroSender.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GyroSender/Pods-GyroSender.debug.xcconfig"; sourceTree = "<group>"; };
+		E39456E1599A75FE351C00FB /* Pods-GyroSenderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GyroSenderTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GyroSenderTests/Pods-GyroSenderTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E8CCB0BA939CD3492F6292B9 /* Pods-GyroSenderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GyroSenderTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GyroSenderTests/Pods-GyroSenderTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDF583321475FD3D6ED56D4F /* Pods_GyroSender.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +63,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				475A1506DE43D90F52C68343 /* Pods_GyroSenderTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3FF85ED82D412537D043BE19 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9978F80CBC6D5E5A2CC18684 /* Pods-GyroSender.debug.xcconfig */,
+				1BDC8C94C53C6922A73F306D /* Pods-GyroSender.release.xcconfig */,
+				E39456E1599A75FE351C00FB /* Pods-GyroSenderTests.debug.xcconfig */,
+				E8CCB0BA939CD3492F6292B9 /* Pods-GyroSenderTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		74BF31401D08AAEA0027C04C = {
 			isa = PBXGroup;
 			children = (
 				74BF314B1D08AAEA0027C04C /* GyroSender */,
 				74BF31601D08AAEA0027C04C /* GyroSenderTests */,
 				74BF314A1D08AAEA0027C04C /* Products */,
+				3FF85ED82D412537D043BE19 /* Pods */,
+				CCCFC4AA47433A04992B738B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,6 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				74BF314C1D08AAEA0027C04C /* AppDelegate.swift */,
+				7477B5C81D08C1EE008B5D44 /* Flow.swift */,
+				7477B5C61D08BE4D008B5D44 /* SearchController.swift */,
 				74BF314E1D08AAEA0027C04C /* ViewController.swift */,
 				74BF31501D08AAEA0027C04C /* Main.storyboard */,
 				74BF31531D08AAEA0027C04C /* Assets.xcassets */,
@@ -96,6 +125,15 @@
 			path = GyroSenderTests;
 			sourceTree = "<group>";
 		};
+		CCCFC4AA47433A04992B738B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1036F2E46FDAFBF1769FEED7 /* Pods_GyroSender.framework */,
+				604D8755706D4156A29C52EB /* Pods_GyroSenderTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +141,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 74BF31661D08AAEA0027C04C /* Build configuration list for PBXNativeTarget "GyroSender" */;
 			buildPhases = (
+				5C3834606DD38E6B8AA30B9E /* 📦 Check Pods Manifest.lock */,
 				74BF31451D08AAEA0027C04C /* Sources */,
 				74BF31461D08AAEA0027C04C /* Frameworks */,
 				74BF31471D08AAEA0027C04C /* Resources */,
+				4464579FBDAF3E0424750DEC /* 📦 Embed Pods Frameworks */,
+				E393BDA3141A2997555F3CA0 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -120,9 +161,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 74BF31691D08AAEA0027C04C /* Build configuration list for PBXNativeTarget "GyroSenderTests" */;
 			buildPhases = (
+				EEB6C74CC5D2250BA312D86D /* 📦 Check Pods Manifest.lock */,
 				74BF31591D08AAEA0027C04C /* Sources */,
 				74BF315A1D08AAEA0027C04C /* Frameworks */,
 				74BF315B1D08AAEA0027C04C /* Resources */,
+				673C8B3578FDBCDEE247DB40 /* 📦 Embed Pods Frameworks */,
+				12466032AF345F2F2F445CA0 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -194,12 +238,107 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		12466032AF345F2F2F445CA0 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GyroSenderTests/Pods-GyroSenderTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4464579FBDAF3E0424750DEC /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GyroSender/Pods-GyroSender-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C3834606DD38E6B8AA30B9E /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		673C8B3578FDBCDEE247DB40 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GyroSenderTests/Pods-GyroSenderTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E393BDA3141A2997555F3CA0 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GyroSender/Pods-GyroSender-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEB6C74CC5D2250BA312D86D /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		74BF31451D08AAEA0027C04C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				74BF314F1D08AAEA0027C04C /* ViewController.swift in Sources */,
+				7477B5C91D08C1EE008B5D44 /* Flow.swift in Sources */,
+				7477B5C71D08BE4D008B5D44 /* SearchController.swift in Sources */,
 				74BF314D1D08AAEA0027C04C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,6 +468,7 @@
 		};
 		74BF31671D08AAEA0027C04C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9978F80CBC6D5E5A2CC18684 /* Pods-GyroSender.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GyroSender/Info.plist;
@@ -340,6 +480,7 @@
 		};
 		74BF31681D08AAEA0027C04C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BDC8C94C53C6922A73F306D /* Pods-GyroSender.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GyroSender/Info.plist;
@@ -351,6 +492,7 @@
 		};
 		74BF316A1D08AAEA0027C04C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E39456E1599A75FE351C00FB /* Pods-GyroSenderTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = GyroSenderTests/Info.plist;
@@ -363,6 +505,7 @@
 		};
 		74BF316B1D08AAEA0027C04C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8CCB0BA939CD3492F6292B9 /* Pods-GyroSenderTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = GyroSenderTests/Info.plist;
@@ -392,6 +535,7 @@
 				74BF31681D08AAEA0027C04C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		74BF31691D08AAEA0027C04C /* Build configuration list for PBXNativeTarget "GyroSenderTests" */ = {
 			isa = XCConfigurationList;
@@ -400,6 +544,7 @@
 				74BF316B1D08AAEA0027C04C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
