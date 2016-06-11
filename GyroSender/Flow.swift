@@ -34,28 +34,32 @@ class Flow: NSObject {
         Meteor.connect(visualisationServiceURL!, callback: registerModule)
     }
 
+    func registerOnline() {
+        let event: [String: AnyObject] = [
+            "type": "state",
+            "payload": 2,
+            "senderId": moduleId!
+        ]
+        Meteor.call("registerWebsocketEvent", params: [event], callback: nil)
+    }
     
     func registerModule() {
         if moduleId == nil {
             Meteor.call("registerWebsocketModule", params: [["type": "iPhone", "name": UIDevice.currentDevice().name]]) { (result, error) in
                 if let moduleId = result as? String {
                     self.moduleId = moduleId
+                    self.registerOnline()
                 }
             }
         } else {
-            let event: [String: AnyObject] = [
-                "type": "stateChange",
-                "payload": 2,
-                "senderId": moduleId!
-            ]
-            Meteor.call("registerWebsocketEvent", params: [event], callback: nil)
+            registerOnline()
         }
     }
     
     func unregisterModule() {
         if let moduleId = moduleId {
             let event: [String: AnyObject] = [
-                "type": "stateChange",
+                "type": "state",
                 "payload": 0,
                 "senderId": moduleId
             ]
@@ -67,7 +71,7 @@ class Flow: NSObject {
 extension Flow: NSNetServiceBrowserDelegate, NSNetServiceDelegate {
     func netServiceBrowser(browser: NSNetServiceBrowser, didFindService service: NSNetService, moreComing: Bool) {
         service.delegate = self
-        service.resolveWithTimeout(60)
+        service.resolveWithTimeout(5)
         print("resolve service")
         visualisationService = service
     }

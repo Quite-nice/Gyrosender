@@ -71,7 +71,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gI0-lH-ezN">
-                                <rect key="frame" x="20" y="28" width="560" height="59"/>
+                                <rect key="frame" x="20" y="28" width="560" height="87"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Please enter your name so we can add it to the visualisation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07f-Vo-8vG">
                                         <rect key="frame" x="0.0" y="0.0" width="455" height="21"/>
@@ -102,6 +102,23 @@
                                             </button>
                                         </subviews>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iPS-f1-sdh">
+                                        <rect key="frame" x="0.0" y="67" width="161" height="21"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Connected to: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xl-gj-sry">
+                                                <rect key="frame" x="0.0" y="0.0" width="113" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="server" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9CH-ii-w4F">
+                                                <rect key="frame" x="113" y="0.0" width="48" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="FAM-hH-K5r" firstAttribute="width" secondItem="gI0-lH-ezN" secondAttribute="width" id="p8Y-tU-dYj"/>
@@ -120,6 +137,7 @@
                     <connections>
                         <outlet property="label" destination="efQ-h6-CaC" id="1ud-Nz-iyM"/>
                         <outlet property="nameTextField" destination="F5O-cQ-T6e" id="POJ-1Z-Oci"/>
+                        <outlet property="serverLabel" destination="9CH-ii-w4F" id="oEZ-ti-XX2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

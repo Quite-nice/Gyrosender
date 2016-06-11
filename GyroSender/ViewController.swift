@@ -20,15 +20,23 @@ func round2(number: Double) -> Double {
 class ViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var serverLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         if motionManager.gyroAvailable {
             print("timeInterval: \(motionManager.gyroUpdateInterval)")
-            motionManager.deviceMotionUpdateInterval = 0.1
+            motionManager.deviceMotionUpdateInterval = 0.8
             print(motionManager.gyroUpdateInterval)
             motionManager.startDeviceMotionUpdatesToQueue(NSOperationQueue.mainQueue()) { (data, error) in
                 if let attitude = data?.attitude {
+                    if let moduleId = flow.moduleId {
+                        Meteor.call("registerWebsocketEvent", params: [[
+                            "senderId": moduleId,
+                            "type": "gyro",
+                            "payload": [attitude.roll, attitude.pitch, attitude.yaw]
+                        ]], callback: nil)
+                    }
                     let rounded = (round2(attitude.roll), round2(attitude.pitch), round2(attitude.yaw))
                     self.label.text = "\(rounded.0) \(rounded.1) \(rounded.2)"
                 }
@@ -37,6 +45,10 @@ class ViewController: UIViewController {
             print("gyro not available")
         }
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        serverLabel.text = flow.visualisationService?.hostName
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,7 +59,7 @@ class ViewController: UIViewController {
     @IBAction func saveName(sender: AnyObject) {
         if let newName = nameTextField.text {
             let event: [String: AnyObject] = [
-                "type": "nameChange",
+                "type": "name",
                 "payload": newName,
                 "senderId": flow.moduleId!
             ]
