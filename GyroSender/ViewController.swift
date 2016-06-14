@@ -22,23 +22,31 @@ class ViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var serverLabel: UILabel!
 
+    @IBOutlet weak var rollBar: UIProgressView!
+    @IBOutlet weak var pitchBar: UIProgressView!
+    @IBOutlet weak var progressBar: UIProgressView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if motionManager.gyroAvailable {
-            print("timeInterval: \(motionManager.gyroUpdateInterval)")
-            motionManager.deviceMotionUpdateInterval = 0.8
-            print(motionManager.gyroUpdateInterval)
+            motionManager.deviceMotionUpdateInterval = 0.1
             motionManager.startDeviceMotionUpdatesToQueue(NSOperationQueue.mainQueue()) { (data, error) in
                 if let attitude = data?.attitude {
+                    self.rollBar.setProgress(Float((attitude.roll / M_PI / 2) + 0.5), animated: false)
+                    self.pitchBar.setProgress(Float((attitude.pitch / M_PI / 2) + 0.5), animated: false)
+                    self.progressBar.setProgress(Float((attitude.yaw / M_PI / 2) + 0.5), animated: false)
+                    let r = attitude.rotationMatrix
                     if let moduleId = flow.moduleId {
                         Meteor.call("registerWebsocketEvent", params: [[
                             "senderId": moduleId,
                             "type": "gyro",
-                            "payload": [attitude.roll, attitude.pitch, attitude.yaw]
+                            "payload": [
+                                atan2(r.m32, r.m33)+M_PI_2,
+                                -atan2(-r.m31, sqrt(pow(r.m32, 2)+pow(r.m33, 2))),
+                                atan2(r.m21, r.m11)
+                            ]
                         ]], callback: nil)
                     }
-                    let rounded = (round2(attitude.roll), round2(attitude.pitch), round2(attitude.yaw))
-                    self.label.text = "\(rounded.0) \(rounded.1) \(rounded.2)"
                 }
             }
         } else {

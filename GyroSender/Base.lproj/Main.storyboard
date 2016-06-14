@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="o1I-gc-aos">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -24,7 +23,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Searching for visualisation database" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EYI-gf-J0n">
                                         <rect key="frame" x="0.0" y="0.0" width="420" height="33"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Please start a visualisation server" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ei-Qo-qhR">
@@ -71,12 +70,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gI0-lH-ezN">
-                                <rect key="frame" x="20" y="28" width="560" height="87"/>
+                                <rect key="frame" x="20" y="28" width="560" height="117"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Please enter your name so we can add it to the visualisation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07f-Vo-8vG">
                                         <rect key="frame" x="0.0" y="0.0" width="455" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FAM-hH-K5r">
@@ -85,7 +84,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyh-zs-sWU">
                                                 <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F5O-cQ-T6e">
@@ -119,8 +118,23 @@
                                             </label>
                                         </subviews>
                                     </stackView>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fyc-2j-A7S">
+                                        <rect key="frame" x="0.0" y="95" width="560" height="2"/>
+                                    </progressView>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Dge-96-xN2">
+                                        <rect key="frame" x="0.0" y="105" width="560" height="2"/>
+                                    </progressView>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="X9D-8j-zfW">
+                                        <rect key="frame" x="0.0" y="115" width="560" height="2"/>
+                                    </progressView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="X9D-8j-zfW" firstAttribute="leading" secondItem="gI0-lH-ezN" secondAttribute="leading" id="3ye-8E-rpd"/>
+                                    <constraint firstAttribute="trailing" secondItem="fyc-2j-A7S" secondAttribute="trailing" id="FVi-qe-lco"/>
+                                    <constraint firstItem="Dge-96-xN2" firstAttribute="leading" secondItem="gI0-lH-ezN" secondAttribute="leading" id="KgX-jQ-6NQ"/>
+                                    <constraint firstItem="fyc-2j-A7S" firstAttribute="leading" secondItem="gI0-lH-ezN" secondAttribute="leading" id="Lqz-Gv-eA2"/>
+                                    <constraint firstAttribute="trailing" secondItem="Dge-96-xN2" secondAttribute="trailing" id="fWq-wz-hmQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="X9D-8j-zfW" secondAttribute="trailing" id="o8U-Wn-xsc"/>
                                     <constraint firstItem="FAM-hH-K5r" firstAttribute="width" secondItem="gI0-lH-ezN" secondAttribute="width" id="p8Y-tU-dYj"/>
                                 </constraints>
                             </stackView>
@@ -137,6 +151,9 @@
                     <connections>
                         <outlet property="label" destination="efQ-h6-CaC" id="1ud-Nz-iyM"/>
                         <outlet property="nameTextField" destination="F5O-cQ-T6e" id="POJ-1Z-Oci"/>
+                        <outlet property="pitchBar" destination="Dge-96-xN2" id="xnx-Ud-Vtb"/>
+                        <outlet property="progressBar" destination="X9D-8j-zfW" id="mGE-VK-JdK"/>
+                        <outlet property="rollBar" destination="fyc-2j-A7S" id="lbX-Ku-B7s"/>
                         <outlet property="serverLabel" destination="9CH-ii-w4F" id="oEZ-ti-XX2"/>
                     </connections>
                 </viewController>
