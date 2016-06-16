@@ -18,20 +18,15 @@ class Flow: NSObject {
     var searchController: SearchController?
     var viewController: ViewController?
     var visualisationService: NSNetService?
-    var visualisationServiceURL: String?
+    let visualisationServiceURL = "wss://visualisation.eu.meteorapp.com/websocket"
 
     override init() {
         super.init()
-        browser.delegate = self
-        
-        browser.searchForServicesOfType("_websocket._tcp", inDomain: "")
     }
     
-    func connectToServer() {
-        searchController?.gotoNextScreen()
-        
+    func connectToServer() {        
         Meteor.client.logLevel = .Warning
-        Meteor.connect(visualisationServiceURL!, callback: registerModule)
+        Meteor.connect(visualisationServiceURL, callback: registerModule)
     }
 
     func registerOnline() {
@@ -64,45 +59,6 @@ class Flow: NSObject {
                 "senderId": moduleId
             ]
             Meteor.call("registerWebsocketEvent", params: [event], callback: nil)
-        }
-    }
-}
-
-extension Flow: NSNetServiceBrowserDelegate, NSNetServiceDelegate {
-    func netServiceBrowser(browser: NSNetServiceBrowser, didFindService service: NSNetService, moreComing: Bool) {
-        service.delegate = self
-        service.resolveWithTimeout(5)
-        print("resolve service")
-        visualisationService = service
-    }
-    
-    func netServiceBrowserWillSearch(browser: NSNetServiceBrowser) {
-        print("netServiceBrowser will search")
-    }
-    
-    func netServiceBrowser(browser: NSNetServiceBrowser, didNotSearch errorDict: [String : NSNumber]) {
-        print("netServiceBrowser did not search")
-    }
-    
-    func netServiceDidResolveAddress(sender: NSNetService) {
-        print("resolved address")
-        if let txt = sender.TXTRecordData() {
-            visualisationServiceURL = NSString(bytes: txt.bytes.advancedBy(5), length: txt.length-5, encoding: NSUTF8StringEncoding) as? String
-            connectToServer()
-        } else {
-            print("no txt record")
-        }
-    }
-    
-    func netService(sender: NSNetService, didNotResolve errorDict: [String : NSNumber]) {
-        print("service did not resolve")
-        print(errorDict)
-    }
-    
-    func netServiceDidStop(sender: NSNetService) {
-        if sender == visualisationService {
-            visualisationService = nil
-            viewController?.dismissViewControllerAnimated(true, completion: nil)
         }
     }
 }
