@@ -82,7 +82,7 @@
 		604D8755706D4156A29C52EB /* Pods_GyroSenderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GyroSenderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7477B5C61D08BE4D008B5D44 /* SearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		7477B5C81D08C1EE008B5D44 /* Flow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flow.swift; sourceTree = "<group>"; };
-		74BF31491D08AAEA0027C04C /* GyroSender.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GyroSender.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		74BF31491D08AAEA0027C04C /* GyroSender Online.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GyroSender Online.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74BF314C1D08AAEA0027C04C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74BF314E1D08AAEA0027C04C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		74BF31511D08AAEA0027C04C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -169,7 +169,7 @@
 		74BF314A1D08AAEA0027C04C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				74BF31491D08AAEA0027C04C /* GyroSender.app */,
+				74BF31491D08AAEA0027C04C /* GyroSender Online.app */,
 				74BF315D1D08AAEA0027C04C /* GyroSenderTests.xctest */,
 				74CCE30D1D09816E00F97A90 /* Gyrosender wrist.app */,
 				74CCE3191D09816E00F97A90 /* Gyrosender wrist Extension.appex */,
@@ -263,7 +263,7 @@
 			);
 			name = GyroSender;
 			productName = GyroSender;
-			productReference = 74BF31491D08AAEA0027C04C /* GyroSender.app */;
+			productReference = 74BF31491D08AAEA0027C04C /* GyroSender Online.app */;
 			productType = "com.apple.product-type.application";
 		};
 		74BF315C1D08AAEA0027C04C /* GyroSenderTests */ = {
@@ -673,8 +673,8 @@
 				INFOPLIST_FILE = GyroSender/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.devian.GyroSender;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.devian.GyroSenderOnline;
+				PRODUCT_NAME = "GyroSender Online";
 			};
 			name = Debug;
 		};
@@ -686,8 +686,8 @@
 				INFOPLIST_FILE = GyroSender/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.devian.GyroSender;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.devian.GyroSenderOnline;
+				PRODUCT_NAME = "GyroSender Online";
 			};
 			name = Release;
 		};
@@ -724,7 +724,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = Gyrosender_wrist_Extension;
 				INFOPLIST_FILE = "Gyrosender wrist/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.devian.GyroSender.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.devian.GyroSenderOnline.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -740,7 +740,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = Gyrosender_wrist_Extension;
 				INFOPLIST_FILE = "Gyrosender wrist/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = com.devian.GyroSender.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.devian.GyroSenderOnline.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -754,7 +754,7 @@
 			buildSettings = {
 				INFOPLIST_FILE = "Gyrosender wrist Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.devian.GyroSender.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.devian.GyroSenderOnline.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -768,7 +768,7 @@
 			buildSettings = {
 				INFOPLIST_FILE = "Gyrosender wrist Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.devian.GyroSender.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = com.devian.GyroSenderOnline.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;

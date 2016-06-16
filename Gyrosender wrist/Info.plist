@@ -28,7 +28,7 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>WKCompanionAppBundleIdentifier</key>
-	<string>com.devian.GyroSender</string>
+	<string>com.devian.GyroSenderOnline</string>
 	<key>WKWatchKitApp</key>
 	<true/>
 </dict>
