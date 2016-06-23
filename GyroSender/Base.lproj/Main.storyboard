@@ -8,7 +8,7 @@
         <!--Search Controller-->
         <scene sceneID="KhB-Wh-Jvl">
             <objects>
-                <viewController id="o1I-gc-aos" customClass="SearchController" customModule="GyroSender" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="o1I-gc-aos" customClass="SearchController" customModule="GyroSender_Online" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eau-aA-Mqz"/>
                         <viewControllerLayoutGuide type="bottom" id="bkc-ta-DQ2"/>
@@ -54,7 +54,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GyroSender" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GyroSender_Online" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>

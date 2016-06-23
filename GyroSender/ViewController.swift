@@ -29,7 +29,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if motionManager.gyroAvailable {
-            motionManager.deviceMotionUpdateInterval = 0.1
+            motionManager.deviceMotionUpdateInterval = 0.15
             motionManager.startDeviceMotionUpdatesToQueue(NSOperationQueue.mainQueue()) { (data, error) in
                 if let attitude = data?.attitude {
                     self.rollBar.setProgress(Float((attitude.roll / M_PI / 2) + 0.5), animated: false)
